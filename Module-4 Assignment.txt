@@ -1,0 +1,308 @@
+Name :- Samarth Joshi
+Module-4 Assignment
+
+1. What is JavaScript?
+  => JavaScript is a high-level, interpreted programming language primarily used for creating interactive and dynamic web content. It is one of the core technologies of the World Wide Web and is supported by all modern web browsers. JavaScript allows developers to add functionality to websites by manipulating the Document Object Model (DOM) of the web pages.
+     it was initially created to make web pages more interactive and responsive. However, over time, it has evolved into a versatile language that can be used not only on the client-side but also on the server-side.
+
+2. What is the use of isNaN function?
+  => The 'isNaN' function is used to determine whether a value is NaN (Not-a-Number) in JavaScript. NaN is a special value that represents an invalid or unrepresentable result of a numeric operation.
+     The 'isNaN' function takes a single parameter and returns a boolean value. It checks if the provided value is NaN and returns true if it is, or false if it is not.
+     Ex:-isNaN(123);      // false
+       	 isNaN('hello');  // true
+	 isNaN(NaN);      // true		
+
+3. What is negative Infinity?
+  => Negative infinity is a concept in mathematics that represents a value that is infinitely small, or smaller than any negative real number. It is the opposite of positive infinity, which represents a value that is infinitely large or greater than any positive real number.
+	it also used in the field of computer science and programming. In some programming languages, negative infinity is a special value that can be assigned to variables or used in calculations. It is often used to represent an undefined or unreachable value, such as the result of dividing a non-zero number by zero.
+
+4. Which company developed JavaScript?
+  => JavaScript was developed by Netscape Communications Corporation. The original development of JavaScript was led by Brendan Eich in 1995. JavaScript was initially created as a scripting language for the Netscape Navigator web browser, and it quickly gained popularity as a versatile and dynamic programming language for web development. Today, JavaScript is widely used for both client-side and server-side web development and is supported by all major web browsers.
+
+5. What are undeclared and undefined variables?
+  => Undeclared variables: An undeclared variable is a variable that has not been declared before its first use in the code. Declaration refers to the process of specifying the variable's name and type before it can be used. If you try to use an undeclared variable, it will typically result in a compilation error or a runtime error, depending on the programming language.
+  Ex:-int main() {
+ 	 x = 10;  // Undeclared variable
+  	return 0;
+	}
+     Undefined variables: An undefined variable is a variable that has been declared but has not been assigned a value before its use. It means the variable exists in the code, but its value is unknown or has not been initialized. Attempting to access or use the value of an undefined variable can result in unpredictable behavior or runtime errors, depending on the programming language. 
+  Ex:-let y;
+	console.log(y);  // Undefined variable
+
+6. Write the code for adding new elements dynamically?
+  => <!DOCTYPE html>
+	<html>
+	<head>
+	  <title>Dynamically Add Elements</title>
+	</head>
+	<body>
+ 	 <h1>Dynamically Add Elements</h1>
+
+  	<div id="container">
+ 	   <!-- Elements will be added here -->
+ 	 </div>
+
+ 	 <button onclick="addNewElement()">Add Element</button>
+
+	  <script>
+  	  function addNewElement() {
+   	   // Create a new element
+   	   var newElement = document.createElement("div");
+   	   newElement.textContent = "Samarth";
+
+   	   // Append the new element to the container
+   	   var container = document.getElementById("container");
+   	   container.appendChild(newElement);
+ 	   }
+	  </script>
+	</body>
+	</html>
+	
+
+7. What is the difference between ViewState and SessionState?
+  => ViewState and SessionState are both mechanisms used in web development to store and manage data across multiple requests in a web application. However, they serve different purposes and have distinct characteristics. 
+--------------------------------------------
+"ViewState:"
+
+   1. It is used to maintain the state of a specific web page or control across postbacks (subsequent requests) within the same session.
+   2. It is designed to store small amounts of data, typically in the form of key-value pairs, that are necessary to maintain the state of the individual web controls on a page.
+   3. ViewState data is encoded and embedded within the page itself, either as a hidden field or within the HTML markup.
+   4. ViewState is mainly used for maintaining the state of controls, such as the values of textboxes, dropdown lists, or checkboxes, between postbacks.
+-------------------------------------------
+"SessionState:"
+
+   1. SessionState is used to store and manage user-specific data across multiple requests or pages within the same session.
+   2. It is designed to handle larger amounts of data, such as user preferences, shopping cart items, or authentication information.
+   3. SessionState data is stored on the server-side, typically in memory or a database, and is associated with a unique session identifier (usually stored in a cookie or passed in the URL).
+   4. SessionState data is accessible from any page within the same session and can be shared across multiple controls or components of the application.
+
+8. What is === operator?
+  => The '===' operator is a comparison operator used in certain programming languages to check for strict equality between two values. It is commonly referred to as the "strict equality operator" or the "triple equals operator."
+    When you use the '===' operator, it compares both the value and the type of the operands. It returns 'true' if the operands are of the same type and have the same value, and 'false' otherwise.
+ Ex:-console.log(5 === 5);      // true
+	console.log(5 === "5");    // false (different types)
+	console.log(5 === 6);      // false
+
+    It's important to note that the `===` operator behaves differently from the `==` operator (double equals operator) in some programming languages. The `==` operator performs type coercion, which means it attempts to convert the operands to a common type before making the comparison. In contrast, the `===` operator strictly compares the type and value without performing any type coercion.
+9. How can the style/class of an element be changed?
+  => 1. Using JavaScript:
+In JavaScript, you can access an element using its unique identifier (ID) or other properties, and then modify its style or class attributes. Here's an example:
+
+// Changing style:
+const element = document.getElementById('elementId');
+element.style.property = 'value';
+
+// Changing class:
+const element = document.getElementById('elementId');
+element.className = 'newClassName';
+
+	In the above code, 'elementId' represents the ID attribute of the element you want to modify. You can replace it with the actual ID of the element you wish to change. Similarly, 'property' represents the specific style property you want to modify (e.g., 'color', 'font-size', etc.), and 'value' represents the new value you want to assign.
+
+	2.Using CSS:
+   If you want to change the style or class of an element directly in CSS, you can use the cascading nature of CSS selectors. Here's an example:
+
+/* Changing style */
+#elementId {
+  property: value;
+}
+
+/* Changing class */
+#elementId {
+  /* existing styles... */
+  /* Add or remove classes */
+  /* Example: */
+  /* Remove existing classes */
+  /* class1 class2 class3 */
+  /* Add new class */
+  /* class4 */
+  /* Result: class4 */
+}
+
+   In the above CSS code, `'elementId'` is the ID of the element you want to modify. Replace it with the actual ID of the element. `'property'` represents the specific style property you want to modify, and `'value'` represents the new value you want to assign.
+
+10. How to read and write a file using JavaScript?
+  => 1. File System module (Node.js):
+	If you're working in a Node.js environment, you can use the built-in File System module to read and write files.
+
+	To read a file:
+const fs = require('fs');
+
+fs.readFile('path/to/file.txt', 'utf8', (error, data) => {
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  console.log(data); // Contents of the file
+});
+
+      To write a file:
+
+const fs = require('fs');
+
+const content = 'Hello, World!';
+
+fs.writeFile('path/to/file.txt', content, 'utf8', (error) => {
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  console.log('File has been written successfully.');
+});
+
+     2. FileReader API (Browser-based JavaScript):
+If you're working in a browser environment, you can use the FileReader API to read files from user input.
+
+   HTML:
+  <input type="file" id="file-input">
+
+  <script src="script.js"></script>
+
+
+   JavaScript (script.js):
+  const fileInput = document.getElementById('file-input');
+
+  fileInput.addEventListener('change', (event) => {
+   const file = event.target.files[0];
+   const reader = new FileReader();
+
+  reader.onload = (event) => {
+    const contents = event.target.result;
+    console.log(contents); // Contents of the file
+  };
+
+  reader.onerror = (event) => {
+    console.error(event.target.error);
+  };
+
+  reader.readAsText(file);
+});
+
+   This example listens for changes in the file input field and reads the selected file. Once the file is read, the contents can be accessed in the `onload` event handler.
+
+   Please note that when working with the FileReader API, you'll need to run your JavaScript code from within an HTML page served by a web server. This is due to security restrictions that prevent file access from a local file system.
+
+11. What are all the looping structures in JavaScript?
+  =>  In JavaScript, there are several looping structures that allow you to repeat a block of code multiple times. The following are the looping structures commonly used in JavaScript:
+
+     1. for loop: The `for` loop executes a block of code for a specified number of times. It consists of an initialization, a condition, and an iteration statement.
+     Ex:-  for (initialization; condition; iteration) {
+        // code to be executed
+     }
+  
+    2. while loop:The `while` loop repeats a block of code while a specified condition is true. It checks the condition before each iteration.
+    Ex:-  while (condition) {
+     // code to be executed
+   }
+
+    3. do-while loop: The `do-while` loop is similar to the `while` loop, but it checks the condition after executing the block of code, ensuring that the code is executed at least once.
+     Ex:-  do {
+     // code to be executed
+   } while (condition);
+
+    4. for...in loop: The `for...in` loop iterates over the properties of an object. It executes the block of code for each enumerable property in the object.
+     Ex:-  for (variable in object) {
+     // code to be executed
+   }
+
+    5. forEach loop: The `forEach` loop is a method available on arrays that executes a provided function once for each array element.
+Ex:-    array.forEach(function(element) {
+     // code to be executed
+   });
+
+
+12. How can you convert the string of any base to an integer in JavaScript?
+  => To convert a string of any base to an integer in JavaScript, you can use the `parseInt()` function and provide the base as the second argument. Here's an example:
+
+   Ex:- const stringNumber = "101010"; // String representation of a number in base 2 (binary)
+const base = 2; // Base of the string number
+	const integerValue = parseInt(stringNumber, base);
+	console.log(integerValue); // Output: 42
+
+   In the above example, the `parseInt()` function takes the `stringNumber` as the first argument and `base` as the second argument. It returns the parsed integer value based on the provided base.
+   You can replace `base` with the desired base value (e.g., 8 for octal, 10 for decimal, 16 for hexadecimal) to convert the string to the corresponding integer value in that base.
+
+13. What is the function of the delete operator?
+  => the `delete` operator is primarily used to remove a property from an object. Its function is to delete a specific property from an object, making it undefined. Here's an example:
+   Ex:- const obj = {
+ 	 name: 'Sam',
+ 	 age: 25,
+	};
+
+	delete obj.age;
+	console.log(obj); // Output: { name: 'Sam' }
+
+   In this example, the `delete` operator is used to remove the `age` property from the `obj` object. After deleting the property, accessing `obj.age` would return `undefined`. The `delete` operator can also be used to remove elements from an array, but it behaves differently from object properties deletion. When an element is deleted from an array using `delete`, it leaves an empty slot instead of shifting the remaining elements. 
+   Ex:- const arr = [1, 2, 3, 4, 5];
+	delete arr[2];
+	console.log(arr); // Output: [1, 2, <1 empty item>, 4, 5]
+
+    In this example, the element at index `2` is deleted using `delete`, resulting in an empty slot in the array. The length of the array remains the same, and accessing the deleted element will return `undefined`.
+   the primary function of the `delete` operator in JavaScript is to remove a property from an object, and it can also be used to delete elements from an array.
+
+14. What are all the types of Pop up boxes available in JavaScript?
+  =>    JavaScript provides several types of popup boxes for interacting with users. The commonly used popup boxes are:
+
+   1. Alert Box: The `alert()` function displays a simple dialog box with a message and an OK button. It is used to provide information or to alert the user about something.
+
+Ex:- alert('Hello, World!');
+   
+   2. Confirm Box: The `confirm()` function displays a dialog box with a message and two buttons: OK and Cancel. It is used when a user needs to confirm or cancel an action. The function returns `true` if the user clicks OK and `false` if the user clicks Cancel.
+
+   Ex:- const result = confirm('Are you sure you want to delete this item?');
+  	 if (result) {
+	     // Delete the item
+	   } else {
+ 	    // Cancel the action
+  	 }
+ 	
+   3. Prompt Box: The `prompt()` function displays a dialog box with a message, an input field for the user to enter data, and OK/Cancel buttons. It is used when the user needs to input some value or provide information. The function returns the value entered by the user or `null` if the user clicks Cancel.
+
+   const name = prompt('Please enter your name:');
+   if (name !== null) {
+     console.log('Hello, ' + name);
+   } else {
+     console.log('No name entered');
+   }
+   
+   These popup boxes are useful for displaying messages, confirming actions, and gathering user input in a simple way. However, their usage should be done judiciously to avoid disrupting the user experience and overwhelming the user with too many interruptions.
+
+15. What is the use of Void (0)?/p0
+  => The expression `void(0)` is commonly used in JavaScript, but its use is generally considered unnecessary and doesn't serve a practical purpose in modern development practices.
+
+    The primary use of `void(0)` is to create a harmless JavaScript expression that doesn't have any side effects. It is commonly used in anchor tags (`<a>`) as the `href` attribute value to create placeholder or non-navigable links. For example:
+
+   <a href="javascript:void(0)">Click me</a>
+
+   By using `void(0)` as the `href` value, clicking on the link will not cause the page to navigate to a different location or trigger any JavaScript code. It's often used as a way to create a clickable element that doesn't perform any action.
+
+   It's worth noting that in modern web development, it's generally recommended to use alternative methods, such as event listeners, instead of relying on `void(0)` for creating non-navigable links.
+
+16. How can a page be forced to load another page in JavaScript?
+  =>  To force a page to load another page in JavaScript, you can use the `window.location` object and set its `href` property to the URL of the new page. Here's an example:
+
+Ex:- // Redirect the current page to a new URL
+     window.location.href = "https://www.example.com/new-page";
+
+   In the above example, `window.location.href` is set to the URL "https://www.example.com/new-page". As a result, the current page will be immediately redirected to the new URL specified.
+    the current page will stop loading and the browser will navigate to the new page. If you want to delay the redirection or perform additional actions before navigating, you can use functions like `setTimeout()` or add event listeners to control the timing and trigger the redirection based on certain conditions.
+
+    Ex:- // Redirect after a delay of 3 seconds
+setTimeout(() => {
+  window.location.href = "https://www.example.com/new-page";
+}, 3000);
+
+17. What are the disadvantages of using innerHTML in JavaScript? 
+  =>  the `innerHTML` property in JavaScript is a convenient way to manipulate and update the content of HTML elements, it has a few potential disadvantages:
+
+   1. Security risks: Using `innerHTML` to insert or update HTML content can be a security risk if you are not careful. If the content you are inserting comes from an untrusted source, there is a possibility of cross-site scripting (XSS) attacks. Malicious scripts embedded in the HTML content can be executed in the context of your page, potentially compromising user data or introducing other vulnerabilities.
+   2. Performance impact: Manipulating the `innerHTML` of an element can be computationally expensive, especially if the HTML content being inserted is large or complex. When you set the `innerHTML` property, the browser has to parse the HTML, modify the DOM structure, and re-render the affected parts of the page. This process can be slower compared to other DOM manipulation methods, such as creating elements programmatically and appending them to the DOM.
+   3. Loss of event listeners and data: When you set the `innerHTML` of an element, the existing content within that element is completely replaced. This means that any event listeners or data associated with the previous content will be lost.
+   =To mitigate these disadvantages, it's recommended to:
+
+:- Sanitize and validate any user-generated content before using it with `innerHTML`.
+:- Consider using other DOM manipulation methods, such as `createElement`, `appendChild`, `replaceChild`, or modern libraries/frameworks that handle the virtual DOM efficiently.
+:- Use event delegation or reattach event listeners after manipulating `innerHTML`.
+:- Test and validate HTML content to ensure it is well-formed and error-free before using `innerHTML`.
+
