@@ -1,0 +1,99 @@
+Name:- Samarth Joshi
+Module-3_Assignment
+
+1. What are the new tags added in HTML5?
+  =>  HTML5 introduced several new tags that expanded the capabilities of web development.
+
+      1. `<article>`: Represents a self-contained, independent piece of content, such as a blog post or news article.
+      2. `<header>`: Defines the header section of a document or a section within a document.
+      3. `<nav>`: Specifies a section containing navigation links.
+      4. `<section>`: Represents a standalone section of content within a document, such as chapters, tabs, or tabbed content.
+      5. `<aside>`: Defines content that is tangentially related to the main content, such as sidebars or pull quotes.
+      6. `<footer>`: Specifies the footer section of a document or a section within a document.
+      7. `<main>`: Indicates the main content of a document. There should be only one `<main>` element per page.
+      8. `<figure>` and `<figcaption>`: Used together to represent images or illustrations with an accompanying caption.
+      9. `<video>` and `<audio>`: Allows the embedding of video and audio content, respectively, directly into web pages.
+      10. `<canvas>`: Provides a drawing surface for creating graphics, animations, and other visual effects using JavaScript.
+      11. `<progress>`: Represents the progress of a task or a process.
+      13. `<time>`: Specifies a machine-readable format of representing dates, times, and durations.
+      14. `<output>`: Displays the result of a calculation or user action.
+
+   These are just some of the new tags introduced in HTML5. There are additional tags and attributes that were also added to enhance the semantic structure and functionality of web pages.
+
+
+2. How to embed audio and video in a webpage?
+  =>  To embed audio and video in a webpage, you can use the HTML5 `<audio>` and `<video>` tags. Here's how you can use them:
+
+  Embedding Audio:
+   1. Start by adding the `<audio>` tag to your HTML document.
+   2. Inside the `<audio>` tag, specify the source of the audio file using the `src` attribute. This can be a local file or a URL.
+   3. You can also add optional attributes like `controls` to display playback controls, `autoplay` to automatically start playing the audio, and `loop` to loop the audio playback.
+
+Ex:- <audio src="audio-file.mp3" controls autoplay></audio>
+
+ Embedding Video:
+   1. Similarly, begin by adding the `<video>` tag to your HTML document.
+   2. Inside the `<video>` tag, provide the source of the video file using the `src` attribute. This can be a local file or a URL.
+   3. You can include optional attributes such as `controls` for playback controls, `autoplay` to start playing the video automatically, `loop` to loop the video playback, and `width` and `height` to set the dimensions of the video display area.
+
+Ex:- <video src="video-file.mp4" controls autoplay width="640" height="360"></video>
+
+   Additionally, you can include multiple `<source>` elements within the `<video>` or `<audio>` tags to provide alternative formats or resolutions for the media file. This ensures compatibility across different browsers and devices.
+
+   Example with multiple sources:
+  Ex:- <video controls>
+  <source src="video-file.webm" type="video/webm">
+  <source src="video-file.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+
+    Remember to provide alternative content within the tags in case the browser does not support the `<audio>` or `<video>` tags.
+
+
+3. Semantic element in HTML5?
+  =>   These semantic elements are designed to describe the purpose and meaning of the content they contain. Here are some of the semantic elements introduced in HTML5:
+
+   1. `<header>`: Represents the introductory content or a container for a set of introductory content. It typically contains a site logo, site title, or navigation elements.
+   2. `<nav>`: Represents a section of a document that contains navigation links, allowing users to navigate within the document or to other documents.
+   3. `<main>`: Specifies the main content of a document. It should be unique and contain the primary content of the document.
+   4. `<article>`: Represents a self-contained composition in a document, such as a blog post, news article, or comment.
+   5. `<section>`: Represents a standalone section of content within a document. It can be used to group related content together.
+   6. `<aside>`: Defines content that is tangentially related to the main content. It is often used for sidebars, pull quotes, or advertising.
+   7. `<footer>`: Represents the footer section of a document or a section within a document. It typically contains information about the author, copyright information, or links to related documents.
+   8. `<figure>` and `<figcaption>`: Used together to represent content such as images, illustrations, diagrams, or code snippets, with an accompanying caption.
+   9. `<time>`: Represents a specific date, time, or duration. It can be used to provide machine-readable or human-readable representations of time-related information.
+   10. `<mark>`: Indicates a portion of text that has been highlighted or marked for reference or emphasis.
+
+
+4. Canvas and SVG tags.
+  =>   Both the `<canvas>` and `<svg>` tags in HTML5 are used for creating graphics and visual content on web pages, but they have different approaches and use cases.
+
+   1. `<canvas>`:
+   :- The `<canvas>` tag provides a drawing surface on which you can use JavaScript to create dynamic and interactive graphics.
+   :- It works by defining a bitmap canvas where you can draw graphics using JavaScript-based APIs.
+   :- It's primarily used for rendering 2D graphics, animations, and games.
+   :- The content drawn on the canvas is not part of the document's DOM tree and cannot be manipulated using standard HTML or CSS.
+   :- The canvas requires scripting to create and modify its content, making it more suitable for dynamic and interactive visualizations.
+
+   Ex:- <canvas id="myCanvas" width="500" height="300"></canvas>
+        <script>
+ 	 const canvas = document.getElementById('myCanvas');
+ 	 const context = canvas.getContext('2d');
+  
+	  // Draw a rectangle
+	  context.fillStyle = 'blue';
+ 	 context.fillRect(50, 50, 200, 100);
+	</script>
+
+   2. `<svg>`:
+   :- The `<svg>` tag is used to embed scalable vector graphics in an HTML document.
+   :- SVG stands for Scalable Vector Graphics, which means the graphics are described using XML-based markup.
+   :- SVG is resolution-independent and can scale smoothly without losing quality.
+   :- The content of an SVG element is part of the document's DOM tree and can be styled and manipulated using CSS and JavaScript.
+   :- SVG is well-suited for creating static or interactive graphics, logos, icons, charts, and other scalable visual elements.
+
+   Ex:- <svg width="200" height="200">
+ 	 <rect x="50" y="50" width="100" height="100" fill="red" />
+	</svg>
+
+   `<canvas>` is used for dynamic bitmap-based graphics rendered through JavaScript, while `<svg>` is used for scalable vector graphics described using XML-based markup, allowing for resolution-independent and manipulable visual elements.
