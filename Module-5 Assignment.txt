@@ -1,0 +1,96 @@
+1. What is jQuery?
+  => jQuery is a fast, lightweight, and feature-rich JavaScript library that simplifies client-side scripting of HTML. It provides a range of functions and utilities that make it easier to manipulate HTML documents, handle events, create animations, and perform AJAX (Asynchronous JavaScript and XML) requests, among other things.
+
+2. How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery ,JQuery Animation?
+  => To apply CSS using jQuery, you can use the `.css()` method. To add and remove classes, you can use the `.addClass()` and `.removeClass()` methods, respectively. For jQuery animations, you can utilize methods like `.animate()` or chaining methods like `.fadeIn()`, `.fadeOut()`, etc.
+
+    1. Applying CSS using jQuery:
+
+	// Change the color of an element to red
+	$('#myElement').css('color', 'red');
+
+	// Change the background color of multiple elements
+	$('.myElements').css('background-color', 'blue');
+
+
+    2. Adding and removing classes using jQuery:
+
+	// Add a class to an element
+	$('#myElement').addClass('highlight');
+
+	// Remove a class from an element
+	$('#myElement').removeClass('highlight');
+
+
+    3. jQuery animation:
+
+	// Animate the width of an element to 400px over 1 second
+	$('#myElement').animate({ width: '400px' }, 1000);
+
+	// Fade in an element over 500 milliseconds
+	$('#myElement').fadeIn(500);
+
+	// Fade out an element over 500 milliseconds and remove it from the DOM
+	$('#myElement').fadeOut(500, function() {
+	  $(this).remove();
+	});
+
+     In the examples above, `#myElement` and `.myElements` are CSS selectors used to target specific elements on the page. You can adjust the selectors based on your HTML structure.
+
+
+3. How to create slider with animation? 
+  => the combination of HTML, CSS, and JavaScript/jQuery to create a slider with animation using jQuery.
+   1. HTML Structure:
+     Start by creating the HTML structure for the slider. Typically, a slider consists of a container that holds a series of slides. Each slide can contain any content you want to display. Here's an example:
+
+	Ex:- <div class="slider">
+	  <div class="slider-container">
+ 	   <div class="slide">Slide 1</div>
+ 	   <div class="slide">Slide 2</div>
+	    <div class="slide">Slide 3</div>
+	  </div>
+	</div>
+
+CSS:
+
+	Ex: .slider {
+ 	 width: 400px;
+ 	 height: 200px;
+ 	 overflow: hidden;
+ 	 position: relative;
+	}
+
+	.slider-container {
+ 	 display: flex;
+ 	 width: 100%;
+	  height: 100%;
+ 	 transition: transform 0.5s ease-in-out;
+	}
+
+	.slide {
+ 	 flex-shrink: 0;
+ 	 width: 100%;
+ 	 height: 100%;
+ 	 display: flex;
+ 	 align-items: center;
+  	justify-content: center;
+ 	 font-size: 24px;
+	}
+
+
+JAVASCRIPT:
+
+	Ex:  const slider = document.querySelector('.slider');
+	const sliderContainer = document.querySelector('.slider-container');
+	const slides = document.querySelectorAll('.slide');
+	let currentSlide = 0;
+
+	function nextSlide() {
+ 	 currentSlide++;
+ 	 if (currentSlide >= slides.length) {
+  	  currentSlide = 0;
+ 	 }
+ 	 sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+	}
+
+	setInterval(nextSlide, 3000); // Change slide every 3 seconds
