@@ -93,3 +93,94 @@ interactive (for devices that allow user interaction), or static (for those that
 19. What is the rule set?
   => A rule set is a grouping of code analysis rules that identify targeted issues and specific conditions for that project. For example, you can apply a rule set that's designed to scan code for publicly available APIs. You can also apply a rule set that includes all the available rules.
 
+20. Create Latouts.
+   => 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            
+        }
+        .card{
+            width: 300px;
+            border: 1px solid;
+            margin: 0 auto;
+        }
+        .img{
+            height: 200px;
+        }
+        .detail{
+            height: 150px;
+            padding: 10px;
+            line-height: 15px;
+        }
+        h1{
+            font-family: cursive;
+        }
+        button{
+            width: 30%;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="card">
+            <div class="img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl1ADai6eh7gS3hGf2hv9l0_btM06BcY3T-w&usqp=CAU" height="100%" width="100%"></div>
+            <div class="detail">
+                <h1>Delicious Food</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora quasi sequi, voluptas ipsam.</p>
+                <button>ADD</button><button>Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img"><img src="https://expertphotography.b-cdn.net/wp-content/uploads/2020/06/pizza-photography-5.jpg" height="100%" width="100%"></div>
+            <div class="detail">
+                <h1>Delicious Food</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora quasi sequi, voluptas ipsam.</p>
+                <button>ADD</button><button>Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzrNjL6G9-9aoESYu49lcBtrlMaJGnMFRmiw&usqp=CAU" height="100%" width="100%"></div>
+            <div class="detail">
+                <h1>Delicious Food</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora quasi sequi, voluptas ipsam.</p>
+                <button>ADD</button><button>Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl1ADai6eh7gS3hGf2hv9l0_btM06BcY3T-w&usqp=CAU" height="100%" width="100%"></div>
+            <div class="detail">
+                <h1>Delicious Food</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora quasi sequi, voluptas ipsam.</p>
+                <button>ADD</button><button>Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzrNjL6G9-9aoESYu49lcBtrlMaJGnMFRmiw&usqp=CAU" height="100%" width="100%"></div>
+            <div class="detail">
+                <h1>Delicious Food</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora quasi sequi, voluptas ipsam.</p>
+                <button>ADD</button><button>Cart</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img"><img src="https://expertphotography.b-cdn.net/wp-content/uploads/2020/06/pizza-photography-5.jpg" height="100%" width="100%"></div>
+            <div class="detail">
+                <h1>Delicious Food</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut tempora quasi sequi, voluptas ipsam.</p>
+                <button>ADD</button><button>Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
